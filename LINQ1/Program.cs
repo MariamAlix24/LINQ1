@@ -43,6 +43,18 @@ namespace LINQ1
             {
                 Console.WriteLine(product);
             }
+            //Q6
+            var result = Source.ProductList
+           .Select(p => new
+           {
+               Name = p.ProductName,
+               Price = p.UnitPrice,
+               StockStatus = p.UnitsInStock > 0 ? "Available" : "Out of Stock"
+           });
+            foreach (var product in result)
+            {
+                Console.WriteLine(product);
+            }
         }
     }
 }
