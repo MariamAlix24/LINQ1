@@ -13,6 +13,14 @@ namespace LINQ1
             {
                 Console.WriteLine(product);
             }
+            //Q2
+            var productNames = Source.ProductList
+            .Select(p => p.ProductName)
+            .ToList();
+            foreach (var name in productNames)
+            {
+                Console.WriteLine(name);
+            }
         }
     }
 }
