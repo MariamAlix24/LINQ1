@@ -88,6 +88,17 @@ namespace LINQ1
             {
                 Console.WriteLine(order);
             }
+            //Q11
+            var positionedProducts = Source.ProductList
+            .Select((p, index) => new
+            {
+                Position = index + 1,
+                p.ProductName
+            });
+            foreach (var product in positionedProducts)
+            {
+                Console.WriteLine(product);
+            }
         }
     }
 }
