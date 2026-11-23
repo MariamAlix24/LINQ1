@@ -62,6 +62,14 @@ namespace LINQ1
             {
                 Console.WriteLine(item);
             }
+            //Q8
+            var sortedProducts1 = Source.ProductList
+            .OrderBy(p => p.Category)
+            .ThenByDescending(p => p.UnitPrice);
+            foreach (var product in sortedProducts1)
+            {
+                Console.WriteLine(product);
+            }
         }
     }
 }
