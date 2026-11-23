@@ -99,6 +99,16 @@ namespace LINQ1
             {
                 Console.WriteLine(product);
             }
+            //Q12
+            string[] Arr = { "aPPLE", "AbAcUs", "bRaNcH", "BlUeBeRrY", "ClOvEr", "cHeRry" };
+            var sortedWords = Arr
+                .OrderBy(w => w.Length)
+                .ThenBy(w => w, StringComparer.OrdinalIgnoreCase);
+
+            foreach (var word in sortedWords)
+            {
+                Console.WriteLine(word);
+            }
         }
     }
 }
