@@ -79,6 +79,15 @@ namespace LINQ1
             {
                 Console.WriteLine(product);
             }
+            //Q10
+            var ordersFrom1997 = from c in Source.CustomerList
+                                 from o in c.Orders
+                                 where o.OrderDate.Year >= 1997
+                                 select new { c.CustomerID, o.OrderDate };
+            foreach (var order in ordersFrom1997)
+            {
+                Console.WriteLine(order);
+            }
         }
     }
 }
