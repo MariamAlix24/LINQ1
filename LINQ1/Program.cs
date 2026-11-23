@@ -21,6 +21,14 @@ namespace LINQ1
             {
                 Console.WriteLine(name);
             }
+            //Q3
+            var sortedProducts = Source.ProductList
+            .OrderBy(p => p.UnitPrice)
+            .Select(p => new { p.ProductName, p.UnitPrice });
+            foreach (var product in sortedProducts)
+            {
+                Console.WriteLine(product);
+            }
         }
     }
 }
