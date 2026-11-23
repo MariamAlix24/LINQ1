@@ -104,10 +104,19 @@ namespace LINQ1
             var sortedWords = Arr
                 .OrderBy(w => w.Length)
                 .ThenBy(w => w, StringComparer.OrdinalIgnoreCase);
-
             foreach (var word in sortedWords)
             {
                 Console.WriteLine(word);
+            }
+            //Q13
+            string[] digits = { "zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine" };
+            var num = digits
+                .Where(d => d.Length > 1 && d[1] == 'i')
+                .Reverse()
+                .ToList();
+            foreach (var item in num)
+            {
+                Console.WriteLine(item);
             }
         }
     }
