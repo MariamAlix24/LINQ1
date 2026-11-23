@@ -29,6 +29,14 @@ namespace LINQ1
             {
                 Console.WriteLine(product);
             }
+            //Q4
+            var productsInRange = Source.ProductList
+           .Where(p => p.UnitPrice >= 10 && p.UnitPrice <= 30);
+            foreach (var product in productsInRange)
+            {
+                Console.WriteLine(product);
+            }
+
         }
     }
 }
