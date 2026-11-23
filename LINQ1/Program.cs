@@ -36,7 +36,13 @@ namespace LINQ1
             {
                 Console.WriteLine(product);
             }
-
+            //Q5
+            var filteredProducts = Source.ProductList
+           .Where(p => p.UnitsInStock > 0 && p.Category == "Condiments");
+            foreach (var product in filteredProducts)
+            {
+                Console.WriteLine(product);
+            }
         }
     }
 }
