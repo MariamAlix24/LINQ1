@@ -70,6 +70,15 @@ namespace LINQ1
             {
                 Console.WriteLine(product);
             }
+            //Q9
+            var beverages = Source.ProductList
+            .Where(p => p.Category == "Beverages")
+            .OrderByDescending(p => p.UnitsInStock)
+            .Select(p => new { p.ProductName, p.UnitsInStock });
+            foreach (var product in beverages)
+            {
+                Console.WriteLine(product);
+            }
         }
     }
 }
