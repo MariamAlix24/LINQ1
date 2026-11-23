@@ -55,6 +55,13 @@ namespace LINQ1
             {
                 Console.WriteLine(product);
             }
+            //Q7
+            var indexedProducts = Source.ProductList
+           .Select((p, index) => $"{index + 1}. {p.ProductName}");
+            foreach (var item in indexedProducts)
+            {
+                Console.WriteLine(item);
+            }
         }
     }
 }
